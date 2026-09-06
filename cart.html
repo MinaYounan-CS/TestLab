@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>السلة - Mina's Store </title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdn.sheetjs.com/xlsx-0.20.3/package/dist/xlsx.full.min.js"></script>
+</head>
+<body>
+    <nav class="navbar">
+        <a href="products.html" class="logo">🛒 Mina's Store </a>
+        <div class="nav-links">
+            <span id="user-name" class="user-info" style="display:none;"></span>
+            <a href="products.html">المنتجات</a>
+            <a href="cart.html">السلة <span id="cart-count" class="cart-badge" style="display:none;">0</span></a>
+            <a href="login.html" id="login-link">تسجيل الدخول</a>
+            <a href="#" id="logout-btn" onclick="logout(); return false;" style="display:none;">تسجيل الخروج</a>
+        </div>
+    </nav>
+
+    <div class="container">
+        <h1 class="page-title">سلة المشتريات</h1>
+        
+        <div class="cart-container">
+            <div id="cart-items">
+                <!-- Cart items will be rendered by JS -->
+            </div>
+            
+            <div id="cart-total" class="cart-total" style="display:none;"></div>
+            
+            <button class="btn btn-checkout" onclick="checkout()" style="margin-top: 20px;">إتمام الطلب (محاكاة)</button>
+            
+            <div style="margin-top:20px; display:flex; gap:10px; flex-wrap:wrap; justify-content:center;">
+                <button class="btn" style="width:auto; padding:10px 18px; background:#27ae60;" onclick="exportToExcel()">📥 تصدير إلى Excel</button>
+            </div>
+            
+            <a href="products.html" style="display:block; text-align:center; margin-top:15px; color:#667eea;">← العودة للمنتجات</a>
+        </div>
+    </div>
+
+    <script src="js/app.js"></script>
+</body>
+</html>
